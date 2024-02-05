@@ -1,3 +1,153 @@
-p {
-   color: green;
+:root {
+   --dashboard-blue: rgb(25, 146, 212);
+   --main-bg-color: rgb(226, 232, 240);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 3fr 1fr;
+}
+
+/* Header section */
+.header {
+   grid-column: 2 / 4;
+   padding: 15px 60px;
+}
+
+.search-container, 
+.notifications-container {
+   display: flex;
+   align-items: center;
+   gap: 30px
+}
+
+.search-container > input {
+   border: none;
+   border-radius: 2rem;
+   width: 650px;
+   height: 30px;
+   background-color: var(--main-bg-color);
+   font-size: 1rem;
+   padding: 0 10px;
+}
+
+.profile-picture-1 {
+   border-radius: 50%;
+   height: 65px;
+   width: 65px;
+}
+.profile-picture-2 {
+   border-radius: 50%;
+}
+
+.notifications-container p {
+   font-size: 1.3rem;
+   font-weight: 700;
+}
+
+.search-container > svg,
+.notifications-container > svg {
+   height: 30px;
+   width: 30px;
+}
+
+.profile,
+.buttons-container {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.search-notifs-container,
+.profile-buttons-container {
+   display: flex;
+   justify-content: space-between;
+}
+
+.profile-text {
+   font-weight: 700;
+}
+.profile-text p:nth-child(1) {
+   padding-bottom: 10px;
+}
+.profile-text p:nth-child(2) {
+   font-size: 1.5rem;
+}
+
+.buttons-container button {
+   border: none;
+   border-radius: 2rem;
+   background-color: var(--dashboard-blue);
+   color: white;
+   width: 120px;
+   height: 50px;
+   font-size: 1.15rem;
+   font-weight: 700;
+}
+
+/* Sidebar section */
+.sidebar {
+   background-color: var(--dashboard-blue);
+   color: white;
+   fill: white;
+   grid-column: 1 / 2;
+   grid-row: 1 / 4;
+}
+
+.logo-container {
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   gap: 15px;
+}
+
+.logo-container > svg {
+   width: 60px;
+   height: 60px;
+}
+
+.menu ul {
+   display: grid;
+   grid-template-rows: repeat(autofit, minmax(25px, 1fr));
+   gap: 15px;
+   margin: 20px 30px;
+}
+
+.menu ul li {
+   list-style-type: none;
+}
+
+.menu ul li a {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+   text-decoration: none;
+   color: white;
+   font-size: 1.3rem;
+   font-weight: 700;
+}
+
+.settings {
+   margin-top: 4rem;
+}
+
+.menu ul li a svg {
+   width: 30px;
+   height: 30px;
+   fill: white;
+}
+
+.main,
+.trending-announcements {
+   background-color: var(--main-bg-color);
 }
