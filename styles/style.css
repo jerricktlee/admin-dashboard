@@ -1,6 +1,7 @@
 :root {
    --dashboard-blue: rgb(25, 146, 212);
    --main-bg-color: rgb(226, 232, 240);
+   --gold-yellow: rgb(240, 180, 41);
 }
 
 * {
@@ -150,4 +151,44 @@ body {
 .main,
 .trending-announcements {
    background-color: var(--main-bg-color);
+}
+
+/* Main section */
+.main {
+   grid-column: 2 / 3;
+   padding: 35px 20px;
+}
+
+.project-container {
+   margin-top: 15px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 35px;
+}
+
+.card {
+   padding: 30px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   justify-content: space-between;
+   border-radius: 1rem;
+   border-left: 10px solid var(--gold-yellow);
+}
+
+.card p {
+   color: gray;
+}
+
+.card-icons {
+   display: flex;
+   justify-content: right;
+   gap: 35px;
+
+}
+
+.card-icons > svg {
+   width: 30px;
+   height: 30px;
 }
