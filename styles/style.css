@@ -16,7 +16,7 @@ body {
 
 .container {
    display: grid;
-   grid-template-columns: 1fr 3fr 1fr;
+   grid-template-columns: 1fr 3fr 1.25fr;
 }
 
 /* Header section */
@@ -171,10 +171,11 @@ body {
    background-color: white;
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 20px;
    justify-content: space-between;
    border-radius: 1rem;
    border-left: 10px solid var(--gold-yellow);
+   box-shadow: 0px 8px 10px rgba(109, 109, 109, 0.5);
 }
 
 .card p {
@@ -192,3 +193,64 @@ body {
    width: 30px;
    height: 30px;
 }
+
+/* Announcements-trending section */
+.trending-announcements {
+   padding: 35px 20px;
+}
+
+.announcement-container {
+   background-color: white;
+   margin-top: 15px;
+   margin-right: 15px;
+   margin-bottom: 25px;
+   border-radius: 1rem;
+   padding: 30px;
+   display: grid;
+   grid-template-rows: repeat(autofit, minmax(100px, 1fr));
+   gap: 25px;
+   box-shadow: 0px 8px 10px rgba(109, 109, 109, 0.5);
+}
+
+.announcement-container div h3 {
+   font-size: 1rem;
+}
+
+.announcement-container div p {
+   font-size: .85rem;
+   color: gray;
+}
+
+.announcement-container div:not(:last-child) {
+   padding-bottom: 20px;
+   border-bottom: 1px solid gray;
+}
+
+.users-container {
+   background-color: white;
+   margin-top: 15px;
+   margin-right: 15px;
+   border-radius: 1rem;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   gap: 17px;
+   box-shadow: 0px 8px 10px rgba(109, 109, 109, 0.5);
+}
+
+.users-container img {
+   border-radius: 50%;
+   height: 55px;
+   width: 55px;
+}
+
+.trending-user {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+}
+
+.trending-user div p:nth-child(2) {
+   color: gray;
+}
+
